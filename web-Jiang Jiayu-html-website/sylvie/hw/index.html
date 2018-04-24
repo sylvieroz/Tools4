@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="https://daneden.github.io/animate.css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+
+</head>
+<body>
+	<div class="container">
+		<!-- module1 -->
+		<div class="item" id="item-1">
+			
+			<div class="top">
+				<a href="##">Sylvie</a>
+				<a class="fr" href="javascript:;" id="btn-1">Individual</a>
+			</div>
+			<h2>WANNA</h2>
+			<div class="inner">
+				<h2>RESET</h2>
+			</div>
+			<div class="hide-1" id="hide-1">
+				<p>Who AM I</p>
+				<p>Where AM I</p>
+			</div>
+		</div>
+		<div class="item" id="item-2">
+			<div class="top">
+				<a href="##">Sylvie</a>
+				<a class="fr" href="javascript:;" id="btn-1">Individual</a>
+			</div>
+
+			<h2>WHAT I THINK</h2>
+			<P>
+				Huge machine tears<br/>
+				The happiness of pressing the weak<br/>
+				I am sorry for you<br/>
+				Because I never give up believing<br/>
+				We are born equally
+
+			</P>
+			<img src="images/2_03.jpg" width="50%" height="250" alt="">
+		</div>
+		<div class="item" id="item-3">
+			<div class="top">
+				<a href="##">Sylvie</a>
+				<a class="fr" href="javascript:;" id="btn-1">Individual</a>
+			</div>
+			<h2>WHO / WH<span class="tit">ERE / WHAT</span></h2>
+			<div class="list">
+				<ul>
+					<li id="btn-2">
+						<h3>WHO AM I</h3>
+						<h4>1998</h4>
+					</li>
+					<li id="btn-3">
+						<h3>WHERE AM I</h3>
+						<h4>2018</h4>
+					</li>
+					<li id="btn-4">
+						<h3>WHAT I LIKE</h3>
+						<h4>2017</h4>
+					</li>
+				</ul>
+			</div>
+			<div class="box">	
+			</div>
+			
+			<p id="hide-2">A little mad free man</p>
+			
+			<p id="hide-3">A huge space of mystery</p>
+			
+			<p id="hide-4">
+				I may be lost. I may be lost. I may not be able to arrive anywhere.<br/>
+				Maybe I have lost everything. Even if I struggle with it, I can only be arrogant. Maybe I just vainly put a lot of rubble into the dust.<br/>
+				No one has placed a bet on me. Does not matter. One thing is clear: At least I have something worth waiting for.
+
+			</p>
+			
+		</div>
+		<div class="item" id="item-4">
+			<img src="images/4_03.jpg" width="100%" alt="">
+		</div>
+	</div>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('#item-1').addClass('bounceInLeft animated');
+			var top1 = $('#item-2').offset().top;
+			var top2 = $('#item-3').offset().top;
+			var top3 = $('#item-4').offset().top;
+			console.log(top);
+			$(window).bind("scroll", function(){ 
+			    var top = $(this).scrollTop();
+			    if(top1 >= $(window).scrollTop() && top1 < ($(window).scrollTop()+$(window).height())) {
+			    	$('#item-2').addClass('bounceInRight animated');
+			    }
+			    if(top2 >= $(window).scrollTop() && top2 < ($(window).scrollTop()+$(window).height())) {
+			    	$('#item-3').addClass('bounceInLeft animated');
+			    }
+			    if(top3 >= $(window).scrollTop() && top3 < ($(window).scrollTop()+$(window).height())) {
+			    	$('#item-4').addClass('bounceInRight animated');
+			    }
+			});
+
+			// click
+			$('#btn-1').click(function() {
+				$('#hide-1').fadeIn();
+			})
+			$('#btn-2').click(function() {
+				$('#hide-2').fadeIn();
+			})
+			$('#btn-3').click(function() {
+				$('#hide-3').fadeIn();
+			})
+			$('#btn-4').click(function() {
+				$('#hide-4').fadeIn();
+			})
+		})
+	</script>
+</body>	
+<html>
